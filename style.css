@@ -50,11 +50,11 @@ nav ul li a {
 nav ul li a.active {
   color: var(--purple-color-code);
   background-color: var(--font-color-for-content-with-colored-background);
-  padding: calc((var(--nav-height) - 17.6px) / 2) 0;
+  padding: calc((var(--nav-height) - 17.6px) / 2);
 }
 
 main {
-  height: calc(100% - (var(--nav-height) + var(--footer-height)));
+  margin-bottom: 20px;
 }
 
 h1 {
