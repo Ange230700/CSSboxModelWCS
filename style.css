@@ -1,0 +1,116 @@
+/* DECLARING CSS VARIABLES */
+
+:root {
+  --purple-color-code: #a306b6;
+  --font-family-used-in-the-entire-site: "Arial", sans-serif;
+  --background-color-of-the-title-and-the-inputs: #efefef;
+  --footer-background-color: #838383;
+  --font-color-for-content-with-colored-background: #ffffff;
+  --nav-height: 70px;
+  --footer-height: 30px;
+  --nav-item-font-weight: bold;
+  --borderRadius: 8px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family-used-in-the-entire-site);
+  height: 100vh;
+}
+
+nav {
+  background-color: var(--purple-color-code);
+  height: var(--nav-height);
+  margin-bottom: 40px;
+}
+
+nav ul {
+  display: flex;
+  margin-left: 20px;
+}
+
+nav ul li {
+  list-style: none;
+  padding: calc((var(--nav-height) - 17.6px) / 2) 0;
+  margin: 0 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: var(--font-color-for-content-with-colored-background);
+  font-weight: var(--nav-item-font-weight);
+  height: var(--nav-height);
+}
+
+nav ul li a.active {
+  color: var(--purple-color-code);
+  background-color: var(--font-color-for-content-with-colored-background);
+  padding: calc((var(--nav-height) - 17.6px) / 2) 0;
+}
+
+main {
+  height: calc(100% - (var(--nav-height) + var(--footer-height)));
+}
+
+h1 {
+  background: var(--background-color-of-the-title-and-the-inputs);
+  text-align: center;
+  margin-inline: 15vw;
+  padding: 25px;
+  border-radius: var(--borderRadius);
+}
+
+form {
+  margin-inline: 22vw;
+  border-radius: var(--borderRadius);
+  display: flex;
+  flex-direction: column;
+}
+
+form h2 {
+  padding: 20px 0 0 0;
+}
+
+form div {
+  display: flex;
+  flex-direction: column;
+  padding: 5px 0;
+}
+
+form div label {
+  padding: 5px 0;
+  font-weight: 500;
+}
+
+input,
+textarea {
+  padding: 10px;
+  border-radius: var(--borderRadius);
+  background: var(--background-color-of-the-title-and-the-inputs);
+  border: none;
+}
+
+button {
+  padding: 10px 20px;
+  border-radius: var(--borderRadius);
+  background: var(--purple-color-code);
+  border: none;
+  color: var(--font-color-for-content-with-colored-background);
+  font-weight: var(--nav-item-font-weight);
+  margin-top: 10px;
+  cursor: pointer;
+  width: fit-content;
+}
+
+footer {
+  background-color: var(--footer-background-color);
+  height: var(--footer-height);
+  color: var(--font-color-for-content-with-colored-background);
+  font-size: 0.75rem;
+  padding: calc((var(--footer-height) - 17.6px) / 2) 0 0 10px;
+}
